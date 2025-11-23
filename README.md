@@ -16,5 +16,5 @@ A minimal, secure Docker base image built from scratch with essential components
 Build the image locally:
 
 ```bash
-docker build -t rootless-scratch:latest .
+docker build -t rootless-scratch:develop .
 ```
