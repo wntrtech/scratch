@@ -2,7 +2,7 @@ FROM alpine:3.22 AS dev
 
 ARG TZ='Europe/Riga'
 
-RUN apk add --no-cache tzdata=2025b-r0 ca-certificates=20250911-r0 && \
+RUN apk add --no-cache tzdata=2025c-r0 ca-certificates=20250911-r0 && \
     cp /usr/share/zoneinfo/${TZ} /etc/localtime && \
     echo ${TZ} > /etc/timezone && \
     addgroup -g 1000 app && \
