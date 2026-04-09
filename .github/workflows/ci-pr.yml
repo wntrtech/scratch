@@ -31,5 +31,5 @@ jobs:
 
       - name: Image security check
         run: |
-          docker run --rm -v $(pwd):/work aquasec/trivy:latest image --exit-code 0 --severity UNKNOWN,LOW,MEDIUM --input /work/${{ github.event.repository.name }}.tar
-          docker run --rm -v $(pwd):/work aquasec/trivy:latest image --exit-code 1 --severity HIGH,CRITICAL --input /work/${{ github.event.repository.name }}.tar
+          docker run --rm -v $(pwd):/work aquasec/trivy:0.69.3 image --exit-code 0 --severity UNKNOWN,LOW,MEDIUM --input /work/${{ github.event.repository.name }}.tar
+          docker run --rm -v $(pwd):/work aquasec/trivy:0.69.3 image --exit-code 1 --severity HIGH,CRITICAL --input /work/${{ github.event.repository.name }}.tar
